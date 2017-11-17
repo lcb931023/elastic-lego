@@ -11,8 +11,8 @@ import ParticulateRenderer from './lib/particulateRenderer';
 const createOrbitViewer = require('three-orbit-viewer')(THREE)
 
 /* Simulation */
-const PARTICLE_COUNT = 150;
-const RELAX_ITERATIONS = 2;
+const PARTICLE_COUNT = 500;
+const RELAX_ITERATIONS = 1;
 const LINK_DIST = 0.02;
 const ANGLE = Math.PI * 0.5;
 const GRAVITY = -0.5;
@@ -22,6 +22,7 @@ const bounds = BoxConstraint.create([-0.5, -0.5, -0.5], [0.5, 0.5, 0.5]);
 let linkIndices = [];
 let angleIndices = [];
 system.each((i)=>{
+  // each particle
   let a = i - 1;
   let b = i;
   if ( i > 0 && i < PARTICLE_COUNT - 1 ) {

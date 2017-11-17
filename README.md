@@ -2,6 +2,10 @@ elastic-lego
 ========
 experiment with verlet system / particle physics simulation. render via simple line module to see results quickly
 
+# Status
+
+Particulate.js is way too hard to use. It requires stuffing all the particles in one system and the system's initialization has to know allllll the particle count. JPWeek used "buffer" to contain calculation of how many particles there should be but this is really hard to fit into bigger three.js / AFrame picture. Time to try a different, easier-to-work-with physics library.
+
 ## License
  
  MIT License
